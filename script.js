@@ -64,6 +64,32 @@ btn.addEventListener("click", () => {
   }
 });
 
+// Go fancy: add h1
 const h1 = document.createElement("h1");
-h1.innerText = "How much rows do you want? Max 100";
+h1.innerText = "Eatch-a-Sketch Project. Have a lot of fun!";
 body.prepend(h1);
+
+// Go fancy add hover effect on BTN with JS only for 1s -> use callback function
+btn.addEventListener("mouseover", () => {
+  btn.style.backgroundColor = "red";
+
+  setTimeout(() => {
+    btn.style.backgroundColor = "rgb(224, 110, 110)";
+  }, 1000);
+});
+
+// Go even more fancier and make some fun effect on h1 with pure JS
+setTimeout(() => {
+  h1.innerText = "Use this button to change how much rows you want!";
+  h1.style.color = "rgb(224, 110, 110)";
+}, 3000);
+
+setTimeout(() => {
+  h1.innerText = "Are you sure you don't want use THIS BUTTON?";
+  h1.style.textDecoration = "underline";
+}, 6000);
+
+setTimeout(() => {
+  h1.innerText = "PLEASE USE THIS BUTTON! I WORKED SO HARD TO MAKE IT! ;-)";
+  h1.style.fontSize = "86";
+}, 9000);

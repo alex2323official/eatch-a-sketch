@@ -64,7 +64,7 @@ h6 {
 }
 /* CSS RESET END*/
 
-/* CSS FOR TESTING */
+/* CSS FOR PROJECT (I'm to lazy to add this with JS)*/
 #container {
   display: flex;
   flex-wrap: wrap;
@@ -72,12 +72,8 @@ h6 {
 }
 
 .grid {
-  min-height: 40px;
+  aspect-ratio: 1 / 1;
   width: calc(100% * 1 / 16);
   background-color: bisque;
   border: solid 2px black;
 }
-
-/* .grid:hover {
-  background-color: aqua;
-} */
