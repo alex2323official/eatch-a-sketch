@@ -30,3 +30,40 @@ btn.setAttribute(
 body.prepend(btn);
 
 // 4. Function to ask user how big grid should be and to reset grid with new settings
+// up to 100
+function setupReset(howBig) {
+  for (let i = 0; i < howBig * 16; i++) {
+    const gridOfDivs = document.createElement("div");
+    gridOfDivs.className = "grid";
+    container.appendChild(gridOfDivs);
+  }
+}
+
+// Function for removing all divs in container
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+
+// 5. Setup on btn: clearing grid, asking for size of new grid, create new grid
+btn.addEventListener("click", () => {
+  removeAllChildNodes(container);
+  let userInputHowMuch = prompt("How many rows do you want? Up to 100 max.");
+  if (userInputHowMuch <= 100) {
+    setupReset(userInputHowMuch);
+  } else {
+    // Default grid
+    removeAllChildNodes(container);
+    alert("Wrong number try again!");
+    for (let i = 0; i < 256; i++) {
+      const gridOfDivs = document.createElement("div");
+      gridOfDivs.className = "grid";
+      container.appendChild(gridOfDivs);
+    }
+  }
+});
+
+const h1 = document.createElement("h1");
+h1.innerText = "How much rows do you want? Max 100";
+body.prepend(h1);
