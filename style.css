@@ -12,6 +12,7 @@
   */
 * {
   margin: 0;
+  padding: 0;
 }
 /*
     Typographic tweaks!
@@ -75,3 +76,7 @@ h6 {
   background-color: bisque;
   border: solid 2px black;
 }
+
+/* .grid:hover {
+  background-color: aqua;
+} */
